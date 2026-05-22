@@ -5,3 +5,6 @@
 project.Rcheck/
 project*.tar.gz
 project*.tgz
+mathR.Rcheck/
+mathR*.tar.gz
+mathR*.tgz

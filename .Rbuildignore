@@ -4,3 +4,6 @@
 ^project.*\.tar\.gz$
 ^project.*\.tgz$
 ^LICENSE\.md$
+^mathR\.Rcheck$
+^mathR.*\.tar\.gz$
+^mathR.*\.tgz$
