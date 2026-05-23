@@ -1,12 +1,13 @@
 Package: mathR
-Title: An R package for basic algebraic operations including unit conversion, root finding, and line-line intersection
+Title: An R package for basic algebraic operations 
 Version: 0.0.0.9000
 Authors@R: 
     person("Daisy", "Nguyen", , "nguyenng@lawrence.edu", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: This package includes functions for root finding, line-line intersection, and modular arithmetic of polynomials.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
 Imports: 
-    ggplot2
+    ggplot2,
+    rootSolve
