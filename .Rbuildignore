@@ -7,3 +7,4 @@
 ^mathR\.Rcheck$
 ^mathR.*\.tar\.gz$
 ^mathR.*\.tgz$
+^data-raw$
