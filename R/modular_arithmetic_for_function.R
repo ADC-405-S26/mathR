@@ -12,8 +12,12 @@
 #'modular_arithmetic_for_function(c(1,3,1,7,5),3)
 modular_arithmetic_for_function <- function(f1, m){
 
-  checkmate::assert_numeric(f1)
-  checkmate::assert_number(m)
+  checkmate::assert_numeric(f1, any.missing = FALSE)
+  checkmate::assert_number(m, na.ok = FALSE)
+
+  if (m==0){
+    stop("Assertion on 'm' failed: Modulus cannot be zero.")
+  }
 
   n <- length(f1)
   i <- 1

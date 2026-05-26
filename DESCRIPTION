@@ -11,4 +11,8 @@ RoxygenNote: 8.0.0
 Imports: 
     checkmate,
     ggplot2,
+    rlang,
     rootSolve
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

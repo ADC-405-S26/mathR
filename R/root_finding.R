@@ -15,9 +15,9 @@
 #'root_finding(25,100,1)
 root_finding <- function(a,b,c){
 
-  checkmate::assert_number(a)
-  checkmate::assert_number(b)
-  checkmate::assert_number(c)
+  checkmate::assert_number(a, na.ok = FALSE)
+  checkmate::assert_number(b, na.ok = FALSE)
+  checkmate::assert_number(c, na.ok = FALSE)
 
   if ((b^2-4*a*c <0) || (a==0 && b==0 && c!=0)){
     paste("Invalid function or the input function is irreducible and does not have a root.")
