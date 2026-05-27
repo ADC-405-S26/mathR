@@ -29,5 +29,5 @@ modular_arithmetic_for_function <- function(f1, m){
     n = n-1
     i = i+1
   }
-  paste(poly, collapse = "+")
+  paste(poly, collapse = " + ")
 }

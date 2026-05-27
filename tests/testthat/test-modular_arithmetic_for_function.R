@@ -1,9 +1,9 @@
 test_that("modular_arithmetic_for_function returns modular of the function correctly", {
   # simple example
-  expect_equal(modular_arithmetic_for_function(c(1,3,4),4), "1*x^2+3*x^1+0*x^0")
+  expect_equal(modular_arithmetic_for_function(c(1,3,4),4), "1*x^2 + 3*x^1 + 0*x^0")
 
   # m is negative
-  expect_equal(modular_arithmetic_for_function(c(4,5,2,6,8),-5), "-1*x^4+0*x^3+-3*x^2+-4*x^1+-2*x^0")
+  expect_equal(modular_arithmetic_for_function(c(4,5,2,6,8),-5), "-1*x^4 + 0*x^3 + -3*x^2 + -4*x^1 + -2*x^0")
 
 })
 

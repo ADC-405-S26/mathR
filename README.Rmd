@@ -1,0 +1,69 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# mathR
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of mathR is to provide convenience functions for basic algebraic operations including root finding, line-line intersection, and modular arithmetic for polynomials. All three functions are applied on polynomials in the real number domain.
+
+
+## Installation
+
+You can install the development version of mathR from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ADC-405-S26/mathR")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+devtools::install_github("ADC-405-S26/mathR")
+
+library(mathR)
+```
+#### example_data table
+
+```{r}
+example_data <- data.frame(example_data)
+```
+
+
+#### root_finding example
+
+```{r}
+func <- example_data$maxdeg2_func[[1]]
+paste0(func[1],"x^2 + ",func[2],"x + ",func[3])
+
+root_finding(func[1],func[2],func[3])
+```
+
+#### line_line_intersection example
+
+```{r, fig.align='center'}
+param <- example_data$param_graph
+line_line_intersection(param[1],param[2],param[3],param[4],param[5],param[6],param[7],param[8],param[9])
+```
+
+#### modular_arithmetic_for_function example
+
+```{r}
+modular_arithmetic_for_function(example_data$rand_func[[1]],example_data$modular[2])
+```

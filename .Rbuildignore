@@ -8,3 +8,4 @@
 ^mathR.*\.tar\.gz$
 ^mathR.*\.tgz$
 ^data-raw$
+^README\.Rmd$
