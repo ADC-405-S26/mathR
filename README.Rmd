@@ -37,14 +37,10 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(mathR)
 ```
-#### example_data table
-
-```{r}
-example_data <- data.frame(example_data)
-```
 
 
 #### root_finding example
+
 
 ```{r}
 func <- example_data$maxdeg2_func[[1]]
@@ -55,8 +51,18 @@ root_finding(func[1],func[2],func[3])
 
 #### line_line_intersection example
 
+
 ```{r, fig.align='center'}
 param <- example_data$param_graph
+func1 <- paste0(param[1],"x^3 + ",param[2],"x^2 + ",param[3],"x + ",param[4])
+func1
+
+func2 <- paste0(param[5],"x^3 + ",param[6],"x^2 + ",param[7],"x + ",param[8])
+func2
+
+interval <- param[9]
+paste0('(',-interval,',', interval,')')
+
 line_line_intersection(param[1],param[2],param[3],param[4],param[5],param[6],param[7],param[8],param[9])
 ```
 
