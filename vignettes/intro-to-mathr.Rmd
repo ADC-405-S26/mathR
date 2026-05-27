@@ -1,0 +1,37 @@
+---
+title: "Introduction to mathR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to mathR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+The `mathR` provides convenience functions for some basic algrebraic tasks. To install this package from GitHub, use
+
+```{r, eval=FALSE}
+# install.packages("remotes")
+# install.packages("devtools")
+devtools::install_github("ADC-405-S26/mathR")
+```
+
+Load the package using the following code.
+
+```{r setup}
+library(mathR)
+```
+
+The package contains three functions
+
+* `root_finding`
+
+* `line_line_intersection`
+* `modular_arithmetic_for_function`

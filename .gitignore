@@ -8,3 +8,7 @@ project*.tgz
 mathR.Rcheck/
 mathR*.tar.gz
 mathR*.tgz
+inst/doc
+/doc/
+/Meta/
+docs
