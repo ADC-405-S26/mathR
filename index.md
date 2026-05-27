@@ -1,0 +1,63 @@
+# mathR
+
+The goal of mathR is to provide convenience functions for basic
+algebraic operations including root finding, line-line intersection, and
+modular arithmetic for polynomials. All three functions are applied on
+polynomials in the real number domain.
+
+## Installation
+
+You can install the development version of mathR from
+[GitHub](https://github.com/) with:
+
+``` r
+
+# install.packages("devtools")
+devtools::install_github("ADC-405-S26/mathR")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+
+library(mathR)
+```
+
+#### example_data table
+
+``` r
+
+example_data <- data.frame(example_data)
+```
+
+#### root_finding example
+
+``` r
+
+func <- example_data$maxdeg2_func[[1]]
+paste0(func[1],"x^2 + ",func[2],"x + ",func[3])
+#> [1] "1x^2 + 2x + 1"
+
+root_finding(func[1],func[2],func[3])
+#> [1] -1
+```
+
+#### line_line_intersection example
+
+``` r
+
+param <- example_data$param_graph
+line_line_intersection(param[1],param[2],param[3],param[4],param[5],param[6],param[7],param[8],param[9])
+```
+
+![](reference/figures/README-unnamed-chunk-4-1.png)
+
+#### modular_arithmetic_for_function example
+
+``` r
+
+modular_arithmetic_for_function(example_data$rand_func[[1]],example_data$modular[2])
+#> [1] "1*x^3 + 0*x^2 + 1*x^1 + 0*x^0"
+```
