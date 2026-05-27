@@ -79,12 +79,6 @@ degree is 3 and coefficients are in the Real domain. It returns a graph
 of the functions and the coordinates of their intersections within the
 user’s specified x-interval.
 
-If you just want to visualize a degree 2 polynomial and its root from
-the first example here, you can make the parameters for the second
-function all zero and start with a wide interval. If the roots appear
-close to the origin, you then zoom into the origin by reducing the size
-of your interval.
-
 ``` r
 
 param <- example_data$param_graph
@@ -104,6 +98,19 @@ line_line_intersection(param[1],param[2],param[3],param[4],param[5],param[6],par
 ```
 
 ![](intro-to-mathr_files/figure-html/unnamed-chunk-4-1.png)
+
+If you just want to visualize a degree 2 polynomial and its root from
+the first example (`f(x)= x^2 + 2x + 1` and `x=-1` is the root) here,
+you can make the parameters for the second function all zero and start
+with a wide interval. If the roots appear close to the origin, you then
+zoom into the origin by reducing the size of your interval.
+
+``` r
+
+line_line_intersection(0,1,2,1,0,0,0,0,2)
+```
+
+![](intro-to-mathr_files/figure-html/unnamed-chunk-5-1.png)
 
 - `modular_arithmetic_for_function`
 
