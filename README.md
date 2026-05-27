@@ -27,26 +27,6 @@ devtools::install_github("ADC-405-S26/mathR")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-devtools::install_github("ADC-405-S26/mathR")
-#> Warning: `install_github()` was deprecated in devtools 2.5.0.
-#> ℹ Please use pak::pak("user/repo") instead.
-#> This warning is displayed once per session.
-#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-#> generated.
-#> Using GitHub PAT from the git credential store.
-#> Downloading GitHub repo ADC-405-S26/mathR@HEAD
-#> 
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#> * checking for file ‘/tmp/RtmpKn11Z7/remotesb7a5544489c/ADC-405-S26-mathR-676ba1d/DESCRIPTION’ ... OK
-#> * preparing ‘mathR’:
-#> * checking DESCRIPTION meta-information ... OK
-#> * checking for LF line-endings in source and make files and shell scripts
-#> * checking for empty or unneeded directories
-#> * building ‘mathR_0.0.0.9000.tar.gz’
-#> Warning: invalid uid value replaced by that for user 'nobody'
-#> Installing package into '/tmp/RtmpbuTSwA/temp_libpath190216f269f'
-#> (as 'lib' is unspecified)
-
 library(mathR)
 ```
 
@@ -80,5 +60,5 @@ line_line_intersection(param[1],param[2],param[3],param[4],param[5],param[6],par
 
 ``` r
 modular_arithmetic_for_function(example_data$rand_func[[1]],example_data$modular[2])
-#> [1] "1*x^3+0*x^2+1*x^1+0*x^0"
+#> [1] "1*x^3 + 0*x^2 + 1*x^1 + 0*x^0"
 ```

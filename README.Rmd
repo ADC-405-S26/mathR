@@ -35,8 +35,6 @@ devtools::install_github("ADC-405-S26/mathR")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-devtools::install_github("ADC-405-S26/mathR")
-
 library(mathR)
 ```
 #### example_data table
