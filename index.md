@@ -25,13 +25,6 @@ This is a basic example which shows you how to solve a common problem:
 library(mathR)
 ```
 
-#### example_data table
-
-``` r
-
-example_data <- data.frame(example_data)
-```
-
 #### root_finding example
 
 ``` r
@@ -49,10 +42,22 @@ root_finding(func[1],func[2],func[3])
 ``` r
 
 param <- example_data$param_graph
+func1 <- paste0(param[1],"x^3 + ",param[2],"x^2 + ",param[3],"x + ",param[4])
+func1
+#> [1] "0x^3 + 1x^2 + 0x + 0"
+
+func2 <- paste0(param[5],"x^3 + ",param[6],"x^2 + ",param[7],"x + ",param[8])
+func2
+#> [1] "0x^3 + 0x^2 + 1x + 0"
+
+interval <- param[9]
+paste0('(',-interval,',', interval,')')
+#> [1] "(-2,2)"
+
 line_line_intersection(param[1],param[2],param[3],param[4],param[5],param[6],param[7],param[8],param[9])
 ```
 
-![](reference/figures/README-unnamed-chunk-4-1.png)
+![](reference/figures/README-unnamed-chunk-3-1.png)
 
 #### modular_arithmetic_for_function example
 

@@ -1,7 +1,45 @@
 # Introduction to mathR
 
-The `mathR` provides convenience functions for some basic algrebraic
-tasks. To install this package from GitHub, use
+## Overview
+
+The `mathR` provides convenience functions for some basic algebraic
+tasks.
+
+The
+[`root_finding()`](https://adc-405-s26.github.io/mathR/reference/root_finding.md)
+function is motivated by the quadratic formula in determining the roots
+of reducible degree 2 polynomials with one variable. It should
+demonstrates the neatness and power of the quadratic formula because
+when we get to degree 3 polynomials, finding roots is no longer a simple
+task.
+
+The second function,
+[`line_line_intersection()`](https://adc-405-s26.github.io/mathR/reference/line_line_intersection.md)
+could be said to come out of the first function. As one thinks of the
+roots of a function, one can extend that idea to multiple functions and
+the intersections between them, if exist, are the roots of the
+difference function `(f1(x)-f2(x))`. The package incorporates the
+ggplot2 package which helps create a visualization of polynomial
+functions with the rootSolve package that can handle root finding for
+degree 3 polynomials to return a plot of the intersections between two
+polynomials inside the user’s interested x-interval. Because line-line
+intersection is highly used in Economics, users in this field could find
+this function helpful.
+
+Lastly, the
+[`modular_arithmetic_for_function()`](https://adc-405-s26.github.io/mathR/reference/modular_arithmetic_for_function.md)
+function is motivated by the subject of rings and fields. A core concept
+users will encounter in this subject is the abstract idea of categorical
+objects: to understand an object, you do not have to look inside it but
+rather study its relationship with objects that are already
+well-understood. Thus, modular arithmetic provides the tool to travel
+from a bigger ring to a smaller one, one which we can understand, and
+hence, on the subject of polynomials, it seems fit within the scope of
+this package.
+
+## Workflow
+
+To install this package from GitHub, use
 
 ``` r
 
@@ -21,6 +59,18 @@ The package contains three functions
 
 - `root_finding`
 
+This
+[`root_finding()`](https://adc-405-s26.github.io/mathR/reference/root_finding.md)
+function returns the roots of a polynomial of one variable x whose
+maximum degree is 2 and coefficients are in the Real domain.
+
 - `line_line_intersection`
+
+This
+[`line_line_intersection()`](https://adc-405-s26.github.io/mathR/reference/line_line_intersection.md)
+function takes two polynomials of one variable x whose maximum degree is
+3 and coefficients are in the Real domain. It returns a graph of the
+functions and the coordinates of their intersections within the user’s
+specified x-interval.
 
 - `modular_arithmetic_for_function`
