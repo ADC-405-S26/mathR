@@ -1,7 +1,10 @@
-# Finding the roots of degree 1 and 2 polynomials with real number coefficients and 1 variable
+# Find roots of polynomials of degree at most 2
 
-Finding the roots of degree 1 and 2 polynomials with real number
-coefficients and 1 variable
+Compute the real roots of a polynomial of the form \\ax^2 + bx + c\\
+using the quadratic formula. \\k\\ is considered a root of \\f(x)\\ if
+\\f(k)=0\\. In mathematics, this is useful for polynomial factorization.
+In other settings, one could be interested in learning when the
+performance of a graph with this specific formula crosses 0.
 
 ## Usage
 
@@ -13,11 +16,11 @@ root_finding(a, b, c)
 
 - a:
 
-  A numeric value for the coefficient of x^2
+  A numeric value for the coefficient of \\x^2\\
 
 - b:
 
-  A numeric value for the coefficient of x
+  A numeric value for the coefficient of \\x\\
 
 - c:
 
@@ -25,8 +28,26 @@ root_finding(a, b, c)
 
 ## Value
 
-A numeric value of the roots or a message if the polynomial is invalid
-or irreducible
+A numeric value of the roots
+
+- If the polynomial has a repeated root, a single numeric value is
+  returned.
+
+- If \\a = 0\\, the polynomial is linear (\\f(x) = bx + c\\) and the
+  linear root is returned.
+
+- If the polynomial has no real roots or is invalid, `NA` is returned.
+
+## Details
+
+For polynomials with degree 2, the discriminant \\b^2 - 4ac\\ determines
+the number of real roots:
+
+- positive discriminant: two distinct real roots
+
+- zero discriminant: one repeated real root
+
+- negative discriminant: no real roots
 
 ## Examples
 

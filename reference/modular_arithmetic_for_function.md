@@ -1,7 +1,11 @@
-# Applying modular arithmetic to polynomials with coefficients in the real number
+# Apply modular arithmetic to polynomials
 
-Applying modular arithmetic to polynomials with coefficients in the real
-number
+Apply modular arithmetic to the coefficients of a real polynomial and
+return the resulting polynomial expression modulo \\m\\. This concept is
+heavily used in abstract algebra to reduce the algebraic structures like
+rings and fields, and also in cryptography to restrict polynomials to a
+finite field, allowing computers to process math without the
+coefficients growing infinitely large.
 
 ## Usage
 
@@ -18,11 +22,21 @@ modular_arithmetic_for_function(f1, m)
 
 - m:
 
-  A numeric value that the polynomial will be mod out by (modulo base)
+  A nonzero numeric value that the polynomial will be mod out by (modulo
+  base)
 
 ## Value
 
-A string of the polynomial modulo m
+A character string representing the polynomial with coefficients reduced
+modulo \\m\\.
+
+## Details
+
+Given a polynomial
+
+\$\$ f(x) = a_nx^n + a\_{n-1}x^{n-1} + \dots + a_1x + a_0, \$\$
+
+the function replaces each coefficient \\a_i\\ with \\a_i \bmod m\\.
 
 ## Examples
 
