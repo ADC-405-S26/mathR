@@ -1,9 +1,26 @@
-#' Applying modular arithmetic to polynomials with coefficients in the real number
+#' Apply modular arithmetic to polynomials
+#'
+#' Apply modular arithmetic to the coefficients of a real polynomial and return the
+#' resulting polynomial expression modulo \eqn{m}. This concept is heavily used in abstract algebra to reduce the
+#' algebraic structures like rings and fields, and also in cryptography to restrict
+#' polynomials to a finite field, allowing computers to process math without the coefficients growing
+#' infinitely large.
 #'
 #' @param f1 A numeric vector of the coefficients of terms in the polynomial (in an order from the leading to the constant coefficient)
-#' @param m A numeric value that the polynomial will be mod out by (modulo base)
+#' @param m A nonzero numeric value that the polynomial will be mod out by (modulo base)
 #'
-#' @returns A string of the polynomial modulo m
+#' @returns A character string representing the polynomial with coefficients reduced modulo \eqn{m}.
+#'
+#' @details
+#' Given a polynomial
+#'
+#' \deqn{
+#' f(x) = a_nx^n + a_{n-1}x^{n-1} + \dots + a_1x + a_0,
+#' }
+#'
+#' the function replaces each coefficient \eqn{a_i} with
+#' \eqn{a_i \bmod m}.
+#'
 #' @export
 #'
 #' @examples

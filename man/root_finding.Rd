@@ -2,22 +2,40 @@
 % Please edit documentation in R/root_finding.R
 \name{root_finding}
 \alias{root_finding}
-\title{Finding the roots of degree 1 and 2 polynomials with real number coefficients and 1 variable}
+\title{Find roots of polynomials of degree at most 2}
 \usage{
 root_finding(a, b, c)
 }
 \arguments{
-\item{a}{A numeric value for the coefficient of x^2}
+\item{a}{A numeric value for the coefficient of \eqn{x^2}}
 
-\item{b}{A numeric value for the coefficient of x}
+\item{b}{A numeric value for the coefficient of \eqn{x}}
 
 \item{c}{A numeric value for the constant coefficient}
 }
 \value{
-A numeric value of the roots or a message if the polynomial is invalid or irreducible
+A numeric value of the roots
+\itemize{
+\item If the polynomial has a repeated root, a single numeric value is returned.
+\item If \eqn{a = 0}, the polynomial is linear (\eqn{f(x) = bx + c}) and the linear root is returned.
+\item If the polynomial has no real roots or is invalid, \code{NA} is returned.
+}
 }
 \description{
-Finding the roots of degree 1 and 2 polynomials with real number coefficients and 1 variable
+Compute the real roots of a polynomial of the form
+\eqn{ax^2 + bx + c} using the quadratic formula.
+\eqn{k} is considered a root of \eqn{f(x)} if \eqn{f(k)=0}.
+In mathematics, this is useful for polynomial factorization. In other settings,
+one could be interested in learning when the performance of a graph with this specific formula
+crosses 0.
+}
+\details{
+For polynomials with degree 2, the discriminant \eqn{b^2 - 4ac} determines the number of real roots:
+\itemize{
+\item positive discriminant: two distinct real roots
+\item zero discriminant: one repeated real root
+\item negative discriminant: no real roots
+}
 }
 \examples{
 

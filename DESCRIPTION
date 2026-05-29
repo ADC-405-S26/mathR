@@ -12,7 +12,8 @@ Imports:
     checkmate,
     ggplot2,
     rlang,
-    rootSolve
+    rootSolve,
+    tibble
 Suggests: 
     knitr,
     rmarkdown,

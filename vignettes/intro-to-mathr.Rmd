@@ -16,15 +16,15 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The `mathR` provides convenience functions for some basic algebraic tasks. 
+The `mathR` provides convenient functions for some basic algebraic tasks. 
 
 The `root_finding()` function is motivated by the quadratic formula in determining the roots of reducible degree 2 polynomials with one variable. It should demonstrates the neatness and power of the quadratic formula because when we get to degree 3 polynomials, finding roots is no longer a simple task. 
 
 The second function, `line_line_intersection()` could be said to come out of the first function. As one thinks of the roots of a function, one can extend that idea to multiple functions. The intersections between them, if exist, are the roots of the difference function `(f1(x)-f2(x))`. The package incorporates the `ggplot2` package which helps create a visualization of polynomial functions with the `rootSolve` package that can handle root finding for degree 3 polynomials to return a plot of the intersections between two polynomials inside the user's interested x-interval. Because line-line intersection is highly used in Economics, users in this field could find this function helpful.
 
-Lastly, the `modular_arithmetic_for_function()` function is motivated by the subject of rings and fields. A core concept users will encounter in this subject is the abstract idea of categorical objects: to understand an object, you do not have to look inside it but rather study its relationship with objects that are already well-understood. Thus, modular arithmetic provides the tool to travel from a bigger ring to a smaller one, one which we can understand, and hence, on the subject of polynomials, it seems fit within the scope of this package.
+Lastly, the `modular_arithmetic_for_function()` function is motivated by the subject of rings and fields. A core concept users will encounter in this subject is the abstract idea of categorical objects: to understand an object, you do not have to look inside it but rather study its relationship with objects that are already well-understood. Thus, modular arithmetic provides the tool to travel from a bigger ring to a smaller one, one which we can understand. On the subject of polynomials, this function seems fit within the scope of this package.
 
-## Workflow
+## Installation
 
 To install this package from GitHub, use
 
@@ -34,14 +34,24 @@ To install this package from GitHub, use
 devtools::install_github("ADC-405-S26/mathR")
 ```
 
-
-Load the package using the following code.
+## Load the package
 
 ```{r setup}
 library(mathR)
 ```
 
-The package contains three functions
+## Example Dataset and Work Flow
+
+The package contains a dataset and three functions
+
+* `example_data`
+
+We will use this dataset to demonstrate the use of each function in the package. 
+
+```{r}
+print.data.frame(example_data)
+```
+
 
 * `root_finding`
 
@@ -49,11 +59,18 @@ This function returns the roots of a polynomial of one variable x whose maximum 
 
 
 ```{r}
-func <- example_data$maxdeg2_func[[1]]
-paste0(func[1],"x^2 + ",func[2],"x + ",func[3])
+# process inputs from the example_data table
+vector_param <- example_data$maxdeg2_func[[1]]
+vector_param
 
-root_finding(func[1],func[2],func[3])
+a <- vector_param[1] # first coefficient
+b <- vector_param[2] # second coefficient
+c <- vector_param[3] # third coefficient
+
+root_finding(a,b,c)
+
 ```
+
 
 
 * `line_line_intersection`
@@ -62,15 +79,16 @@ This function takes two polynomials of one variable x whose maximum degree is 3 
 
 
 ```{r, fig.align='center'}
+# process inputs from the example_data table
 param <- example_data$param_graph
 func1 <- paste0(param[1],"x^3 + ",param[2],"x^2 + ",param[3],"x + ",param[4])
-func1
+func1        # first function
 
 func2 <- paste0(param[5],"x^3 + ",param[6],"x^2 + ",param[7],"x + ",param[8])
-func2
+func2        # second function
 
 interval <- param[9]
-paste0('(',-interval,',', interval,')')
+paste0('(',-interval,',', interval,')')        # graphing window
 
 line_line_intersection(param[1],param[2],param[3],param[4],param[5],param[6],param[7],param[8],param[9])
 ```
@@ -80,7 +98,9 @@ If you just want to visualize a degree 2 polynomial and its root from the first 
 
 
 ```{r, fig.align='center'}
-line_line_intersection(0,1,2,1,0,0,0,0,2)
+line_line_intersection(a1=0,a2=1,a3=2,a4=1,
+                       b1=0,b2=0,b3=0,b4=0,
+                       interval =2)
 ```
 
 * `modular_arithmetic_for_function`
@@ -88,5 +108,12 @@ line_line_intersection(0,1,2,1,0,0,0,0,2)
 This function applies modular arithmetic to polynomials whose coefficients are in the Real domain.
 
 ```{r}
-modular_arithmetic_for_function(example_data$rand_func[[1]],example_data$modular[2])
+# process inputs from the example_data table
+func_coeff <- example_data$rand_func[[1]]
+func_coeff
+
+m <- example_data$modular[2]
+m
+
+modular_arithmetic_for_function(func_coeff,m)
 ```
